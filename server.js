@@ -2,19 +2,14 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
-
-const Video = require("./models/Videogames");
+const gameRouter = require("./routes/videogames.js");
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(methodOverride("_method"));
+app.use("/videogames", gameRouter);
 
-app.get("/videogames", (req, res) => {
-  res.render("index.ejs", {
-    vg: Video
-  });
-});
-
-app.listen(3000, () => {
-  console.log("app listening on port: 3000");
+app.listen(3000, err => {
+  console.log(err || "app listening on port: 3000");
 });

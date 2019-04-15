@@ -8,5 +8,17 @@
     </head>
     <body>
     <h1>All Video Games</h1>
+     <ul>
+            <% for(let i = 0; i < vg.length; i++){ %>
+                <li>
+                    <a href="/videogames/<%=i%>"><%=vg[i].name; %></a> 
+                    
+
+                    <form action="/videogames/<%=i%>?_method=DELETE" method="POST">
+                      <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
     </body>
 </html>
