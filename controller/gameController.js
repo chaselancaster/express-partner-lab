@@ -9,5 +9,11 @@ module.exports = {
   destroy: (req, res) => {
     Video.splice(req.params.id, 1);
     res.redirect("/videogames");
+  },
+  edit: (req, res) => {
+    res.render("edit.ejs", {
+      vg: Video[req.params.id],
+      id: req.params.id
+    });
   }
 };

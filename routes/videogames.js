@@ -4,5 +4,6 @@ const gameController = require("../controller/gameController.js");
 
 gameRouter.get("/", gameController.index);
 gameRouter.delete("/:id", gameController.destroy);
+gameRouter.get("/:id/edit", gameController.edit);
 
 module.exports = gameRouter;
