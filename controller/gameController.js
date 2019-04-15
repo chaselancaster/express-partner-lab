@@ -15,5 +15,9 @@ module.exports = {
       vg: Video[req.params.id],
       id: req.params.id
     });
+  },
+  update: (req, res) => {
+    Video[req.params.id] = req.body;
+    res.redirect("/videogames");
   }
 };
