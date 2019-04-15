@@ -9,10 +9,11 @@
     <body>
     <h1>Edit Video Games</h1>
     <form method="POST" action="/videogames/<%=id%>?_method=PUT">
-     Name: <input name="name" value="<%=vg.name%>"/>
-    Genre: <input name="genre" value="<%=vg.genre%>"/>
-    Multiplayer Game: <input name="multiplayer" value="<%=vg.multiplayer%>"/>
-    <button type="submit">submit</button>
+     Name: <input name="name" value="<%=vg.name%>"/> <br/>
+    Genre: <input name="genre" value="<%=vg.genre%>"/> <br/>
+    Multiplayer Game: <input name="multiplayer" value="<%=vg.multiplayer%>"/><br/>
+    <button type="submit">submit</button><br/>
+    <a href="/videogames">Go Home</a>
     </form>
     </body>
 </html>
