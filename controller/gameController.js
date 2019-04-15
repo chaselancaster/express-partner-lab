@@ -5,5 +5,9 @@ module.exports = {
     res.render("index.ejs", {
       vg: Video
     });
+  },
+  destroy: (req, res) => {
+    Video.splice(req.params.id, 1);
+    res.redirect("/videogames");
   }
 };
